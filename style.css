@@ -2,6 +2,8 @@
 :root {
   --background-color: #f5f5f5;
   --text-color: #2ca4c7;
+   --opacity-dark:0;
+      --opacity-light:1;
 }
 
 body {
@@ -13,11 +15,27 @@ body {
   font-weight: bold;
   letter-spacing: 5px;
   margin-top: 10%;
+    
+ 
 }
-
+.teaserlight{
+    opacity: var(--opacity-light); 
+    position: fixed; 
+    top: 31%;
+    left: 41%;
+}
+.teaserdark{
+    opacity: var(--opacity-dark); 
+      position: fixed; 
+    top: 31%;
+    left: 41%;
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #000000;
     --text-color: #2ca4c7;
+    --opacity-dark:1;
+      --opacity-light:0;
+      transition: 1.5s;
   }
 }
